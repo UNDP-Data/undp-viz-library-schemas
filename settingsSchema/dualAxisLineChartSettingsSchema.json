@@ -1,0 +1,329 @@
+{
+  "type": "object",
+  "properties": {
+    "customLayers": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "position": {
+            "type": "string",
+            "enum": [
+              "before",
+              "after"
+            ]
+          },
+          "layer": {
+            "type": "object"
+          }
+        },
+        "required": [
+          "layer",
+          "position"
+        ]
+      }
+    },
+    "precision": {
+      "type": "number"
+    },
+    "styles": {
+      "type": "object"
+    },
+    "classNames": {
+      "type": "object"
+    },
+    "ariaLabel": {
+      "type": "string"
+    },
+    "graphTitle": {
+      "oneOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "object"
+        }
+      ]
+    },
+    "graphDescription": {
+      "oneOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "object"
+        }
+      ]
+    },
+    "curveType": {
+      "type": "string",
+      "enum": [
+        "linear",
+        "curve",
+        "step",
+        "stepAfter",
+        "stepBefore"
+      ]
+    },
+    "labels": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "minItems": 2,
+      "maxItems": 2
+    },
+    "footNote": {
+      "oneOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "object"
+        }
+      ]
+    },
+    "width": {
+      "type": "number"
+    },
+    "height": {
+      "type": "number"
+    },
+    "sources": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "source": {
+            "type": "string"
+          },
+          "link": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "source"
+        ]
+      }
+    },
+    "noOfXTicks": {
+      "type": "number"
+    },
+    "dateFormat": {
+      "type": "string"
+    },
+    "showValues": {
+      "type": "boolean"
+    },
+    "showColorScale": {
+      "type": "boolean"
+    },
+    "backgroundColor": {
+      "oneOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "boolean"
+        }
+      ]
+    },
+    "padding": {
+      "type": "string"
+    },
+    "leftMargin": {
+      "type": "number"
+    },
+    "rightMargin": {
+      "type": "number"
+    },
+    "topMargin": {
+      "type": "number"
+    },
+    "bottomMargin": {
+      "type": "number"
+    },
+    "lineColors": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "minItems": 2,
+      "maxItems": 2
+    },
+    "sameAxes": {
+      "type": "boolean"
+    },
+    "relativeHeight": {
+      "type": "number"
+    },
+    "minHeight": {
+      "type": "number"
+    },
+    "highlightAreaSettings": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "coordinates": {
+            "type": "array",
+            "items": {
+              "oneOf": [
+                {
+                  "type": "number"
+                },
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            },
+            "minItems": 2,
+            "maxItems": 2
+          },
+          "style": {
+            "type": "object"
+          },
+          "className": {
+            "type": "string"
+          },
+          "color": {
+            "type": "string"
+          },
+          "strokeWidth": {
+            "type": "number"
+          }
+        },
+        "required": [
+          "coordinates"
+        ]
+      }
+    },
+    "graphID": {
+      "type": "string"
+    },
+    "graphDownload": {
+      "type": "boolean"
+    },
+    "dataDownload": {
+      "type": "boolean"
+    },
+    "language": {
+      "type": "string",
+      "enum": [
+        "en",
+        "ar",
+        "az",
+        "bn",
+        "cy",
+        "he",
+        "hi",
+        "jp",
+        "ka",
+        "km",
+        "ko",
+        "my",
+        "ne",
+        "zh",
+        "custom"
+      ]
+    },
+    "animate": {
+      "oneOf": [
+        {
+          "type": "object",
+          "properties": {
+            "duration": {
+              "type": "number"
+            },
+            "once": {
+              "type": "boolean"
+            },
+            "amount": {
+              "anyOf": [
+                {
+                  "type": "string",
+                  "enum": [
+                    "some",
+                    "all"
+                  ]
+                },
+                {
+                  "type": "number"
+                }
+              ]
+            }
+          },
+          "required": [
+            "duration",
+            "once",
+            "amount"
+          ]
+        },
+        {
+          "type": "boolean"
+        }
+      ]
+    },
+    "strokeWidth": {
+      "type": "number"
+    },
+    "showDots": {
+      "type": "boolean"
+    },
+    "colorLegendTitle": {
+      "type": "string"
+    },
+    "theme": {
+      "type": "string",
+      "enum": [
+        "light",
+        "dark"
+      ]
+    },
+    "noOfYTicks": {
+      "type": "number"
+    },
+    "minDate": {
+      "oneOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "number"
+        }
+      ]
+    },
+    "maxDate": {
+      "oneOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "number"
+        }
+      ]
+    },
+    "yAxisTitle": {
+      "type": "string"
+    },
+    "lineSuffixes": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "minItems": 2,
+      "maxItems": 2
+    },
+    "linePrefixes": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "minItems": 2,
+      "maxItems": 2
+    }
+  }
+}

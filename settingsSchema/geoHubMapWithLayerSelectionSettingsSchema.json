@@ -1,0 +1,180 @@
+{
+  "type": "object",
+  "properties": {
+    "styles": {
+      "type": "object"
+    },
+    "classNames": {
+      "type": "object"
+    },
+    "mapStyle": {
+      "type": "string"
+    },
+    "mapLegend": {
+      "oneOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "object"
+        }
+      ]
+    },
+    "center": {
+      "type": "array",
+      "items": {
+        "type": "number"
+      },
+      "minItems": 2,
+      "maxItems": 2
+    },
+    "zoomLevel": {
+      "type": "number"
+    },
+    "graphTitle": {
+      "oneOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "object"
+        }
+      ]
+    },
+    "sources": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "source": {
+            "type": "string"
+          },
+          "link": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "source"
+        ]
+      }
+    },
+    "ariaLabel": {
+      "type": "string"
+    },
+    "graphDescription": {
+      "oneOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "object"
+        }
+      ]
+    },
+    "footNote": {
+      "oneOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "object"
+        }
+      ]
+    },
+    "backgroundColor": {
+      "oneOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "boolean"
+        }
+      ]
+    },
+    "padding": {
+      "type": "string"
+    },
+    "width": {
+      "type": "number"
+    },
+    "height": {
+      "type": "number"
+    },
+    "relativeHeight": {
+      "type": "number"
+    },
+    "minHeight": {
+      "type": "number"
+    },
+    "graphID": {
+      "type": "string"
+    },
+    "language": {
+      "type": "string",
+      "enum": [
+        "en",
+        "ar",
+        "az",
+        "bn",
+        "cy",
+        "he",
+        "hi",
+        "jp",
+        "ka",
+        "km",
+        "ko",
+        "my",
+        "ne",
+        "zh",
+        "custom"
+      ]
+    },
+    "theme": {
+      "type": "string",
+      "enum": [
+        "light",
+        "dark"
+      ]
+    },
+    "uiMode": {
+      "type": "string",
+      "enum": [
+        "light",
+        "normal"
+      ]
+    },
+    "layerSelection": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string"
+          },
+          "layerID": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "minItems": 1
+          }
+        },
+        "required": [
+          "name",
+          "layerID"
+        ]
+      },
+      "minItems": 1
+    },
+    "excludeLayers": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
+  },
+  "required": [
+    "mapStyle",
+    "layerSelection"
+  ]
+}

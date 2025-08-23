@@ -1,0 +1,181 @@
+{
+  "type": "object",
+  "properties": {
+    "customLayers": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "position": {
+            "type": "string",
+            "enum": [
+              "before",
+              "after"
+            ]
+          },
+          "layer": {
+            "type": "object"
+          }
+        },
+        "required": [
+          "layer",
+          "position"
+        ]
+      }
+    },
+    "styles": {
+      "type": "object"
+    },
+    "classNames": {
+      "type": "object"
+    },
+    "curveType": {
+      "type": "string",
+      "enum": [
+        "linear",
+        "curve",
+        "step",
+        "stepAfter",
+        "stepBefore"
+      ]
+    },
+    "lineColor": {
+      "type": "string"
+    },
+    "ariaLabel": {
+      "type": "string"
+    },
+    "graphTitle": {
+      "oneOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "object"
+        }
+      ]
+    },
+    "graphDescription": {
+      "oneOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "object"
+        }
+      ]
+    },
+    "footNote": {
+      "oneOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "object"
+        }
+      ]
+    },
+    "width": {
+      "type": "number"
+    },
+    "height": {
+      "type": "number"
+    },
+    "sources": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "source": {
+            "type": "string"
+          },
+          "link": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "source"
+        ]
+      }
+    },
+    "dateFormat": {
+      "type": "string"
+    },
+    "area": {
+      "type": "boolean"
+    },
+    "backgroundColor": {
+      "oneOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "boolean"
+        }
+      ]
+    },
+    "padding": {
+      "type": "string"
+    },
+    "leftMargin": {
+      "type": "number"
+    },
+    "rightMargin": {
+      "type": "number"
+    },
+    "topMargin": {
+      "type": "number"
+    },
+    "bottomMargin": {
+      "type": "number"
+    },
+    "relativeHeight": {
+      "type": "number"
+    },
+    "minHeight": {
+      "type": "number"
+    },
+    "graphID": {
+      "type": "string"
+    },
+    "maxValue": {
+      "type": "number"
+    },
+    "minValue": {
+      "type": "number"
+    },
+    "graphDownload": {
+      "type": "boolean"
+    },
+    "dataDownload": {
+      "type": "boolean"
+    },
+    "language": {
+      "type": "string",
+      "enum": [
+        "en",
+        "ar",
+        "az",
+        "bn",
+        "cy",
+        "he",
+        "hi",
+        "jp",
+        "ka",
+        "km",
+        "ko",
+        "my",
+        "ne",
+        "zh",
+        "custom"
+      ]
+    },
+    "theme": {
+      "type": "string",
+      "enum": [
+        "light",
+        "dark"
+      ]
+    }
+  }
+}

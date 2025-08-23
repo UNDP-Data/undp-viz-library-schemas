@@ -1,0 +1,170 @@
+{
+  "type": "object",
+  "properties": {
+    "precision": {
+      "type": "number"
+    },
+    "styles": {
+      "type": "object"
+    },
+    "classNames": {
+      "type": "object"
+    },
+    "year": {
+      "oneOf": [
+        {
+          "type": "number"
+        },
+        {
+          "type": "string"
+        }
+      ]
+    },
+    "ariaLabel": {
+      "type": "string"
+    },
+    "textBackground": {
+      "type": "boolean"
+    },
+    "centerAlign": {
+      "type": "boolean"
+    },
+    "verticalAlign": {
+      "type": "string",
+      "enum": [
+        "center",
+        "top",
+        "bottom"
+      ]
+    },
+    "layout": {
+      "type": "string",
+      "enum": [
+        "primary",
+        "secondary"
+      ]
+    },
+    "headingFontSize": {
+      "type": "string"
+    },
+    "graphTitle": {
+      "oneOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "object"
+        }
+      ]
+    },
+    "graphDescription": {
+      "oneOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "object"
+        }
+      ]
+    },
+    "suffix": {
+      "type": "string"
+    },
+    "prefix": {
+      "type": "string"
+    },
+    "sources": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "source": {
+            "type": "string"
+          },
+          "link": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "source"
+        ]
+      }
+    },
+    "footNote": {
+      "oneOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "object"
+        }
+      ]
+    },
+    "backgroundColor": {
+      "oneOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "boolean"
+        }
+      ]
+    },
+    "padding": {
+      "type": "string"
+    },
+    "graphID": {
+      "type": "string"
+    },
+    "aggregationMethod": {
+      "type": "string",
+      "enum": [
+        "count",
+        "max",
+        "min",
+        "average",
+        "sum"
+      ]
+    },
+    "language": {
+      "type": "string",
+      "enum": [
+        "en",
+        "ar",
+        "az",
+        "bn",
+        "cy",
+        "he",
+        "hi",
+        "jp",
+        "ka",
+        "km",
+        "ko",
+        "my",
+        "ne",
+        "zh",
+        "custom"
+      ]
+    },
+    "theme": {
+      "type": "string",
+      "enum": [
+        "light",
+        "dark"
+      ]
+    },
+    "countOnly": {
+      "type": "array",
+      "items": {
+        "oneOf": [
+          {
+            "type": "string"
+          },
+          {
+            "type": "number"
+          }
+        ]
+      }
+    }
+  }
+}

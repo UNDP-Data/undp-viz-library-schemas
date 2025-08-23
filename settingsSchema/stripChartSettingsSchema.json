@@ -1,0 +1,296 @@
+{
+  "type": "object",
+  "properties": {
+    "customLayers": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "position": {
+            "type": "string",
+            "enum": [
+              "before",
+              "after"
+            ]
+          },
+          "layer": {
+            "type": "object"
+          }
+        },
+        "required": [
+          "layer",
+          "position"
+        ]
+      }
+    },
+    "precision": {
+      "type": "number"
+    },
+    "dimmedOpacity": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 1
+    },
+    "animate": {
+      "oneOf": [
+        {
+          "type": "object",
+          "properties": {
+            "duration": {
+              "type": "number"
+            },
+            "once": {
+              "type": "boolean"
+            },
+            "amount": {
+              "anyOf": [
+                {
+                  "type": "string",
+                  "enum": [
+                    "some",
+                    "all"
+                  ]
+                },
+                {
+                  "type": "number"
+                }
+              ]
+            }
+          },
+          "required": [
+            "duration",
+            "once",
+            "amount"
+          ]
+        },
+        {
+          "type": "boolean"
+        }
+      ]
+    },
+    "styles": {
+      "type": "object"
+    },
+    "classNames": {
+      "type": "object"
+    },
+    "detailsOnClick": {
+      "oneOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "object"
+        }
+      ]
+    },
+    "graphTitle": {
+      "oneOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "object"
+        }
+      ]
+    },
+    "valueColor": {
+      "type": "string"
+    },
+    "ariaLabel": {
+      "type": "string"
+    },
+    "graphDescription": {
+      "oneOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "object"
+        }
+      ]
+    },
+    "footNote": {
+      "oneOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "object"
+        }
+      ]
+    },
+    "width": {
+      "type": "number"
+    },
+    "height": {
+      "type": "number"
+    },
+    "sources": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "source": {
+            "type": "string"
+          },
+          "link": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "source"
+        ]
+      }
+    },
+    "stripType": {
+      "type": "string",
+      "enum": [
+        "strip",
+        "dot"
+      ]
+    },
+    "colors": {
+      "oneOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      ]
+    },
+    "colorDomain": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "colorLegendTitle": {
+      "type": "string"
+    },
+    "radius": {
+      "type": "number"
+    },
+    "backgroundColor": {
+      "oneOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "boolean"
+        }
+      ]
+    },
+    "padding": {
+      "type": "string"
+    },
+    "leftMargin": {
+      "type": "number"
+    },
+    "rightMargin": {
+      "type": "number"
+    },
+    "topMargin": {
+      "type": "number"
+    },
+    "bottomMargin": {
+      "type": "number"
+    },
+    "relativeHeight": {
+      "type": "number"
+    },
+    "minHeight": {
+      "type": "number"
+    },
+    "highlightedDataPoints": {
+      "type": "array",
+      "items": {
+        "oneOf": [
+          {
+            "type": "string"
+          },
+          {
+            "type": "number"
+          }
+        ]
+      }
+    },
+    "showColorScale": {
+      "type": "boolean"
+    },
+    "graphID": {
+      "type": "string"
+    },
+    "maxValue": {
+      "type": "number"
+    },
+    "minValue": {
+      "type": "number"
+    },
+    "noOfTicks": {
+      "type": "number"
+    },
+    "graphDownload": {
+      "type": "boolean"
+    },
+    "dataDownload": {
+      "type": "boolean"
+    },
+    "prefix": {
+      "type": "string"
+    },
+    "suffix": {
+      "type": "string"
+    },
+    "showNAColor": {
+      "type": "boolean"
+    },
+    "language": {
+      "type": "string",
+      "enum": [
+        "en",
+        "ar",
+        "az",
+        "bn",
+        "cy",
+        "he",
+        "hi",
+        "jp",
+        "ka",
+        "km",
+        "ko",
+        "my",
+        "ne",
+        "zh",
+        "custom"
+      ]
+    },
+    "highlightColor": {
+      "type": "string"
+    },
+    "dotOpacity": {
+      "type": "number"
+    },
+    "theme": {
+      "type": "string",
+      "enum": [
+        "light",
+        "dark"
+      ]
+    },
+    "orientation": {
+      "type": "string",
+      "enum": [
+        "vertical",
+        "horizontal"
+      ]
+    },
+    "resetSelectionOnDoubleClick": {
+      "type": "boolean"
+    }
+  }
+}

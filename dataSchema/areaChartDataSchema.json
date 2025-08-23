@@ -1,0 +1,31 @@
+{
+  "type": "array",
+  "items": {
+    "type": "object",
+    "properties": {
+      "date": {
+        "oneOf": [
+          {
+            "type": "number"
+          },
+          {
+            "type": "string"
+          }
+        ]
+      },
+      "y": {
+        "type": "array",
+        "items": {
+          "type": "number"
+        }
+      },
+      "data": {
+        "type": "object"
+      }
+    },
+    "required": [
+      "date",
+      "y"
+    ]
+  }
+}

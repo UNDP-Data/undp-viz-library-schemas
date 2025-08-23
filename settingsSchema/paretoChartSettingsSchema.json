@@ -1,0 +1,267 @@
+{
+  "type": "object",
+  "properties": {
+    "customLayers": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "position": {
+            "type": "string",
+            "enum": [
+              "before",
+              "after"
+            ]
+          },
+          "layer": {
+            "type": "object"
+          }
+        },
+        "required": [
+          "layer",
+          "position"
+        ]
+      }
+    },
+    "lineAxisTitle": {
+      "type": "string"
+    },
+    "barAxisTitle": {
+      "type": "string"
+    },
+    "precision": {
+      "type": "number"
+    },
+    "animate": {
+      "oneOf": [
+        {
+          "type": "object",
+          "properties": {
+            "duration": {
+              "type": "number"
+            },
+            "once": {
+              "type": "boolean"
+            },
+            "amount": {
+              "anyOf": [
+                {
+                  "type": "string",
+                  "enum": [
+                    "some",
+                    "all"
+                  ]
+                },
+                {
+                  "type": "number"
+                }
+              ]
+            }
+          },
+          "required": [
+            "duration",
+            "once",
+            "amount"
+          ]
+        },
+        {
+          "type": "boolean"
+        }
+      ]
+    },
+    "styles": {
+      "type": "object"
+    },
+    "classNames": {
+      "type": "object"
+    },
+    "detailsOnClick": {
+      "oneOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "object"
+        }
+      ]
+    },
+    "curveType": {
+      "type": "string",
+      "enum": [
+        "linear",
+        "curve",
+        "step",
+        "stepAfter",
+        "stepBefore"
+      ]
+    },
+    "showValues": {
+      "type": "boolean"
+    },
+    "graphTitle": {
+      "oneOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "object"
+        }
+      ]
+    },
+    "ariaLabel": {
+      "type": "string"
+    },
+    "graphDescription": {
+      "oneOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "object"
+        }
+      ]
+    },
+    "barTitle": {
+      "type": "string"
+    },
+    "lineTitle": {
+      "type": "string"
+    },
+    "footNote": {
+      "oneOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "object"
+        }
+      ]
+    },
+    "width": {
+      "type": "number"
+    },
+    "height": {
+      "type": "number"
+    },
+    "sources": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "source": {
+            "type": "string"
+          },
+          "link": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "source"
+        ]
+      }
+    },
+    "backgroundColor": {
+      "oneOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "boolean"
+        }
+      ]
+    },
+    "padding": {
+      "type": "string"
+    },
+    "leftMargin": {
+      "type": "number"
+    },
+    "rightMargin": {
+      "type": "number"
+    },
+    "topMargin": {
+      "type": "number"
+    },
+    "bottomMargin": {
+      "type": "number"
+    },
+    "barColor": {
+      "type": "string"
+    },
+    "lineColor": {
+      "type": "string"
+    },
+    "sameAxes": {
+      "type": "boolean"
+    },
+    "relativeHeight": {
+      "type": "number"
+    },
+    "minHeight": {
+      "type": "number"
+    },
+    "graphID": {
+      "type": "string"
+    },
+    "graphDownload": {
+      "type": "boolean"
+    },
+    "dataDownload": {
+      "type": "boolean"
+    },
+    "barPadding": {
+      "type": "number"
+    },
+    "truncateBy": {
+      "type": "number"
+    },
+    "showLabels": {
+      "type": "boolean"
+    },
+    "language": {
+      "type": "string",
+      "enum": [
+        "en",
+        "ar",
+        "az",
+        "bn",
+        "cy",
+        "he",
+        "hi",
+        "jp",
+        "ka",
+        "km",
+        "ko",
+        "my",
+        "ne",
+        "zh",
+        "custom"
+      ]
+    },
+    "theme": {
+      "type": "string",
+      "enum": [
+        "light",
+        "dark"
+      ]
+    },
+    "noOfTicks": {
+      "type": "number"
+    },
+    "lineSuffix": {
+      "type": "string"
+    },
+    "barSuffix": {
+      "type": "string"
+    },
+    "linePrefix": {
+      "type": "string"
+    },
+    "barPrefix": {
+      "type": "string"
+    },
+    "resetSelectionOnDoubleClick": {
+      "type": "boolean"
+    }
+  }
+}

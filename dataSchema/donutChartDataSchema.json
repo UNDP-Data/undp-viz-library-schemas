@@ -1,0 +1,28 @@
+{
+  "type": "array",
+  "items": {
+    "type": "object",
+    "properties": {
+      "size": {
+        "type": "number"
+      },
+      "label": {
+        "oneOf": [
+          {
+            "type": "string"
+          },
+          {
+            "type": "number"
+          }
+        ]
+      },
+      "data": {
+        "type": "object"
+      }
+    },
+    "required": [
+      "size",
+      "label"
+    ]
+  }
+}

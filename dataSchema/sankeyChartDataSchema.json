@@ -1,0 +1,39 @@
+{
+  "type": "array",
+  "items": {
+    "type": "object",
+    "properties": {
+      "source": {
+        "oneOf": [
+          {
+            "type": "string"
+          },
+          {
+            "type": "number"
+          }
+        ]
+      },
+      "target": {
+        "oneOf": [
+          {
+            "type": "string"
+          },
+          {
+            "type": "number"
+          }
+        ]
+      },
+      "value": {
+        "type": "number"
+      },
+      "data": {
+        "type": "object"
+      }
+    },
+    "required": [
+      "source",
+      "target",
+      "value"
+    ]
+  }
+}

@@ -1,0 +1,305 @@
+{
+  "type": "object",
+  "properties": {
+    "customLayers": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "position": {
+            "type": "string",
+            "enum": [
+              "before",
+              "after"
+            ]
+          },
+          "layer": {
+            "type": "object"
+          }
+        },
+        "required": [
+          "layer",
+          "position"
+        ]
+      }
+    },
+    "precision": {
+      "type": "number"
+    },
+    "dimmedOpacity": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 1
+    },
+    "animate": {
+      "oneOf": [
+        {
+          "type": "object",
+          "properties": {
+            "duration": {
+              "type": "number"
+            },
+            "once": {
+              "type": "boolean"
+            },
+            "amount": {
+              "anyOf": [
+                {
+                  "type": "string",
+                  "enum": [
+                    "some",
+                    "all"
+                  ]
+                },
+                {
+                  "type": "number"
+                }
+              ]
+            }
+          },
+          "required": [
+            "duration",
+            "once",
+            "amount"
+          ]
+        },
+        {
+          "type": "boolean"
+        }
+      ]
+    },
+    "styles": {
+      "type": "object"
+    },
+    "classNames": {
+      "type": "object"
+    },
+    "detailsOnClick": {
+      "oneOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "object"
+        }
+      ]
+    },
+    "topMargin": {
+      "type": "number"
+    },
+    "bottomMargin": {
+      "type": "number"
+    },
+    "leftMargin": {
+      "type": "number"
+    },
+    "rightMargin": {
+      "type": "number"
+    },
+    "ariaLabel": {
+      "type": "string"
+    },
+    "legendMaxWidth": {
+      "type": "string"
+    },
+    "colors": {
+      "oneOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      ]
+    },
+    "graphTitle": {
+      "oneOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "object"
+        }
+      ]
+    },
+    "sources": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "source": {
+            "type": "string"
+          },
+          "link": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "source"
+        ]
+      }
+    },
+    "graphDescription": {
+      "oneOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "object"
+        }
+      ]
+    },
+    "footNote": {
+      "oneOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "object"
+        }
+      ]
+    },
+    "radius": {
+      "type": "number"
+    },
+    "strokeWidth": {
+      "type": "number"
+    },
+    "showNAColor": {
+      "type": "boolean"
+    },
+    "showValues": {
+      "type": "boolean"
+    },
+    "showDots": {
+      "type": "boolean"
+    },
+    "fillShape": {
+      "type": "boolean"
+    },
+    "showColorScale": {
+      "type": "boolean"
+    },
+    "backgroundColor": {
+      "oneOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "boolean"
+        }
+      ]
+    },
+    "colorLegendTitle": {
+      "type": "string"
+    },
+    "padding": {
+      "type": "string"
+    },
+    "graphID": {
+      "type": "string"
+    },
+    "graphDownload": {
+      "type": "boolean"
+    },
+    "dataDownload": {
+      "type": "boolean"
+    },
+    "colorDomain": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "axisLabels": {
+      "type": "array",
+      "items": {
+        "oneOf": [
+          {
+            "type": "string"
+          },
+          {
+            "type": "number"
+          }
+        ]
+      }
+    },
+    "curveType": {
+      "type": "string",
+      "enum": [
+        "linear",
+        "curve"
+      ]
+    },
+    "highlightedLines": {
+      "type": "array",
+      "items": {
+        "oneOf": [
+          {
+            "type": "string"
+          },
+          {
+            "type": "number"
+          }
+        ]
+      }
+    },
+    "noOfTicks": {
+      "type": "number"
+    },
+    "maxValue": {
+      "type": "number"
+    },
+    "minValue": {
+      "type": "number"
+    },
+    "language": {
+      "type": "string",
+      "enum": [
+        "en",
+        "ar",
+        "az",
+        "bn",
+        "cy",
+        "he",
+        "hi",
+        "jp",
+        "ka",
+        "km",
+        "ko",
+        "my",
+        "ne",
+        "zh",
+        "custom"
+      ]
+    },
+    "theme": {
+      "type": "string",
+      "enum": [
+        "light",
+        "dark"
+      ]
+    },
+    "width": {
+      "type": "number"
+    },
+    "height": {
+      "type": "number"
+    },
+    "relativeHeight": {
+      "type": "number"
+    },
+    "minHeight": {
+      "type": "number"
+    },
+    "resetSelectionOnDoubleClick": {
+      "type": "boolean"
+    }
+  },
+  "required": [
+    "axisLabels"
+  ]
+}

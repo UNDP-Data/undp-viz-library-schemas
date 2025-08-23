@@ -1,0 +1,40 @@
+{
+  "type": "array",
+  "items": {
+    "type": "object",
+    "properties": {
+      "date": {
+        "oneOf": [
+          {
+            "type": "number"
+          },
+          {
+            "type": "string"
+          }
+        ]
+      },
+      "y1": {
+        "oneOf": [
+          {
+            "type": "number"
+          }
+        ]
+      },
+      "y2": {
+        "oneOf": [
+          {
+            "type": "number"
+          }
+        ]
+      },
+      "data": {
+        "type": "object"
+      }
+    },
+    "required": [
+      "date",
+      "y1",
+      "y2"
+    ]
+  }
+}

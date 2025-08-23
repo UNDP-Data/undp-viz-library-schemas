@@ -1,0 +1,33 @@
+{
+  "type": "array",
+  "items": {
+    "type": "object",
+    "properties": {
+      "date": {
+        "oneOf": [
+          {
+            "type": "number"
+          },
+          {
+            "type": "string"
+          }
+        ]
+      },
+      "y": {
+        "type": "number"
+      },
+      "yMin": {
+        "type": "number"
+      },
+      "yMax": {
+        "type": "number"
+      },
+      "data": {
+        "type": "object"
+      }
+    },
+    "required": [
+      "date"
+    ]
+  }
+}

@@ -1,0 +1,1704 @@
+{
+  "type": "object",
+  "properties": {
+    "precision": {
+      "type": "number"
+    },
+    "animate": {
+      "oneOf": [
+        {
+          "type": "object",
+          "properties": {
+            "duration": {
+              "type": "number"
+            },
+            "once": {
+              "type": "boolean"
+            },
+            "amount": {
+              "anyOf": [
+                {
+                  "type": "string",
+                  "enum": [
+                    "some",
+                    "all"
+                  ]
+                },
+                {
+                  "type": "number"
+                }
+              ]
+            }
+          },
+          "required": [
+            "duration",
+            "once",
+            "amount"
+          ]
+        },
+        {
+          "type": "boolean"
+        }
+      ]
+    },
+    "styles": {
+      "type": "object"
+    },
+    "classNames": {
+      "type": "object"
+    },
+    "curveType": {
+      "type": "string",
+      "enum": [
+        "linear",
+        "curve",
+        "step",
+        "stepAfter",
+        "stepBefore"
+      ]
+    },
+    "axisTitle": {
+      "type": "string"
+    },
+    "theme": {
+      "type": "string",
+      "enum": [
+        "light",
+        "dark"
+      ]
+    },
+    "textBackground": {
+      "type": "boolean"
+    },
+    "headingFontSize": {
+      "type": "string"
+    },
+    "centerAlign": {
+      "type": "boolean"
+    },
+    "verticalAlign": {
+      "type": "string",
+      "enum": [
+        "center",
+        "top",
+        "bottom"
+      ]
+    },
+    "regressionLine": {
+      "oneOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "boolean"
+        }
+      ]
+    },
+    "ariaLabel": {
+      "type": "string"
+    },
+    "includeLayers": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "excludeLayers": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "layerSelection": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string"
+          },
+          "layerID": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "minItems": 1
+          }
+        },
+        "required": [
+          "name",
+          "layerID"
+        ]
+      },
+      "minItems": 1
+    },
+    "maxBarThickness": {
+      "type": "number"
+    },
+    "minBarThickness": {
+      "type": "number"
+    },
+    "maxNumberOfBars": {
+      "type": "number"
+    },
+    "aggregationMethod": {
+      "type": "string",
+      "enum": [
+        "average",
+        "count",
+        "max",
+        "min",
+        "sum"
+      ]
+    },
+    "mapProjection": {
+      "type": "string",
+      "enum": [
+        "mercator",
+        "equalEarth",
+        "naturalEarth",
+        "orthographic",
+        "albersUSA"
+      ]
+    },
+    "annotations": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "color": {
+            "type": "string"
+          },
+          "text": {
+            "type": "string"
+          },
+          "xCoordinate": {
+            "oneOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "number"
+              }
+            ]
+          },
+          "yCoordinate": {
+            "oneOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "number"
+              }
+            ]
+          },
+          "xOffset": {
+            "type": "number"
+          },
+          "yOffset": {
+            "type": "number"
+          },
+          "align": {
+            "type": "string",
+            "enum": [
+              "center",
+              "left",
+              "right"
+            ]
+          },
+          "fontWeight": {
+            "type": "string",
+            "enum": [
+              "regular",
+              "bold",
+              "medium"
+            ]
+          },
+          "showConnector": {
+            "oneOf": [
+              {
+                "type": "boolean"
+              },
+              {
+                "type": "number"
+              }
+            ]
+          },
+          "connectorRadius": {
+            "type": "number"
+          },
+          "maxWidth": {
+            "type": "number"
+          },
+          "styles": {
+            "type": "object",
+            "properties": {
+              "connector": {
+                "type": "object"
+              },
+              "text": {
+                "type": "object"
+              }
+            }
+          },
+          "classNames": {
+            "type": "object",
+            "properties": {
+              "connector": {
+                "type": "string"
+              },
+              "text": {
+                "type": "string"
+              }
+            }
+          }
+        },
+        "required": [
+          "text"
+        ]
+      }
+    },
+    "area": {
+      "type": "boolean"
+    },
+    "arrowConnector": {
+      "type": "boolean"
+    },
+    "autoPlay": {
+      "type": "boolean"
+    },
+    "autoSort": {
+      "type": "boolean"
+    },
+    "axisTitles": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "minItems": 2,
+      "maxItems": 2
+    },
+    "backgroundColor": {
+      "oneOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "boolean"
+        }
+      ]
+    },
+    "barColor": {
+      "type": "string"
+    },
+    "barColors": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "minItems": 2,
+      "maxItems": 2
+    },
+    "barGraphLayout": {
+      "type": "string",
+      "enum": [
+        "horizontal",
+        "vertical"
+      ]
+    },
+    "barPadding": {
+      "type": "number"
+    },
+    "barTitle": {
+      "type": "string"
+    },
+    "bottomMargin": {
+      "type": "number"
+    },
+    "center": {
+      "type": "array",
+      "items": {
+        "type": "number"
+      },
+      "minItems": 2,
+      "maxItems": 2
+    },
+    "centerGap": {
+      "type": "number"
+    },
+    "centerPoint": {
+      "type": "array",
+      "items": {
+        "type": "number"
+      },
+      "minItems": 2,
+      "maxItems": 2
+    },
+    "color": {
+      "anyOf": [
+        {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        {
+          "type": "string"
+        }
+      ]
+    },
+    "colorDomain": {
+      "oneOf": [
+        {
+          "type": "array",
+          "items": {
+            "type": "number"
+          }
+        },
+        {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      ]
+    },
+    "colorLegendTitle": {
+      "type": "string"
+    },
+    "colors": {
+      "anyOf": [
+        {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        {
+          "type": "array",
+          "items": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        },
+        {
+          "type": "string"
+        }
+      ]
+    },
+    "columnData": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "align": {
+            "type": "string",
+            "enum": [
+              "center",
+              "left",
+              "right"
+            ]
+          },
+          "chip": {
+            "type": "boolean"
+          },
+          "chipColors": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "color": {
+                  "type": "string"
+                },
+                "value": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "columnId": {
+            "type": "string"
+          },
+          "columnTitle": {
+            "type": "string"
+          },
+          "columnWidth": {
+            "type": "number"
+          },
+          "filterOptions": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "prefix": {
+            "type": "string"
+          },
+          "separator": {
+            "type": "string"
+          },
+          "sortable": {
+            "type": "boolean"
+          },
+          "suffix": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "columnId"
+        ]
+      }
+    },
+    "connectorStrokeWidth": {
+      "type": "number"
+    },
+    "countOnly": {
+      "type": "array",
+      "items": {
+        "oneOf": [
+          {
+            "type": "string"
+          },
+          {
+            "type": "number"
+          }
+        ]
+      }
+    },
+    "dataDownload": {
+      "type": "boolean"
+    },
+    "dateFormat": {
+      "type": "string"
+    },
+    "donutColorDomain": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "donutStrokeWidth": {
+      "type": "number"
+    },
+    "dotOpacity": {
+      "type": "number"
+    },
+    "fillContainer": {
+      "type": "boolean"
+    },
+    "footNote": {
+      "oneOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "object"
+        }
+      ]
+    },
+    "graphDescription": {
+      "oneOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "object"
+        }
+      ]
+    },
+    "graphDownload": {
+      "type": "boolean"
+    },
+    "graphID": {
+      "type": "string"
+    },
+    "showColorScale": {
+      "type": "boolean"
+    },
+    "graphTitle": {
+      "oneOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "object"
+        }
+      ]
+    },
+    "graphType": {
+      "type": "string",
+      "enum": [
+        "barGraph",
+        "circlePacking",
+        "donutChart",
+        "treeMap"
+      ]
+    },
+    "gridSize": {
+      "type": "number"
+    },
+    "height": {
+      "type": "number"
+    },
+    "highlightAreaColor": {
+      "type": "string"
+    },
+    "highlightAreaSettings": {
+      "anyOf": [
+        {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "coordinates": {
+                "type": "array",
+                "items": {
+                  "oneOf": [
+                    {
+                      "type": "number"
+                    },
+                    {
+                      "type": "string"
+                    },
+                    {
+                      "type": "null"
+                    }
+                  ]
+                },
+                "minItems": 2,
+                "maxItems": 2
+              },
+              "style": {
+                "type": "object"
+              },
+              "className": {
+                "type": "string"
+              },
+              "color": {
+                "type": "string"
+              },
+              "strokeWidth": {
+                "type": "number"
+              }
+            },
+            "required": [
+              "coordinates"
+            ]
+          }
+        },
+        {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "coordinates": {
+                "type": "array",
+                "items": {
+                  "oneOf": [
+                    {
+                      "type": "number"
+                    },
+                    {
+                      "type": "null"
+                    }
+                  ]
+                },
+                "minItems": 4,
+                "maxItems": 4
+              },
+              "style": {
+                "type": "object"
+              },
+              "className": {
+                "type": "string"
+              },
+              "color": {
+                "type": "string"
+              },
+              "strokeWidth": {
+                "type": "number"
+              }
+            },
+            "required": [
+              "coordinates"
+            ]
+          }
+        }
+      ]
+    },
+    "highlightColor": {
+      "type": "string"
+    },
+    "highlightedIds": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "highlightedDataPoints": {
+      "type": "array",
+      "items": {
+        "oneOf": [
+          {
+            "type": "string"
+          },
+          {
+            "type": "number"
+          }
+        ]
+      }
+    },
+    "highlightedLines": {
+      "type": "array",
+      "items": {
+        "oneOf": [
+          {
+            "type": "string"
+          },
+          {
+            "type": "number"
+          }
+        ]
+      }
+    },
+    "isWorldMap": {
+      "type": "boolean"
+    },
+    "labelOrder": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "labels": {
+      "type": "array",
+      "items": {
+        "oneOf": [
+          {
+            "type": "string"
+          },
+          {
+            "type": "number"
+          }
+        ]
+      }
+    },
+    "language": {
+      "type": "string",
+      "enum": [
+        "ar",
+        "en",
+        "he"
+      ]
+    },
+    "leftBarTitle": {
+      "type": "string"
+    },
+    "leftMargin": {
+      "type": "number"
+    },
+    "lineColor": {
+      "type": "string"
+    },
+    "lineColors": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "lineTitle": {
+      "type": "string"
+    },
+    "mainText": {
+      "oneOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "object",
+          "properties": {
+            "label": {
+              "type": "string"
+            },
+            "suffix": {
+              "type": "string"
+            },
+            "prefix": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "label"
+          ]
+        }
+      ]
+    },
+    "mapBorderColor": {
+      "type": "string"
+    },
+    "mapBorderWidth": {
+      "type": "number"
+    },
+    "mapData": {
+      "oneOf": [
+        {
+          "type": "object"
+        },
+        {
+          "type": "string"
+        }
+      ]
+    },
+    "mapNoDataColor": {
+      "type": "string"
+    },
+    "mapProperty": {
+      "type": "string"
+    },
+    "mapStyle": {
+      "oneOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "name": {
+                "type": "string"
+              },
+              "style": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "name",
+              "style"
+            ]
+          },
+          "minItems": 1
+        }
+      ]
+    },
+    "mapStyles": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "minItems": 2,
+      "maxItems": 2
+    },
+    "maxPositionValue": {
+      "type": "number"
+    },
+    "maxRadiusValue": {
+      "type": "number"
+    },
+    "maxValue": {
+      "type": "number"
+    },
+    "maxXValue": {
+      "type": "number"
+    },
+    "maxYValue": {
+      "type": "number"
+    },
+    "minHeight": {
+      "type": "number"
+    },
+    "minPositionValue": {
+      "type": "number"
+    },
+    "minValue": {
+      "type": "number"
+    },
+    "minXValue": {
+      "type": "number"
+    },
+    "minYValue": {
+      "type": "number"
+    },
+    "noDataColor": {
+      "type": "string"
+    },
+    "noOfXTicks": {
+      "type": "number"
+    },
+    "note": {
+      "type": "string"
+    },
+    "numberOfBins": {
+      "type": "number"
+    },
+    "padding": {
+      "type": "string"
+    },
+    "prefix": {
+      "type": "string"
+    },
+    "radius": {
+      "type": "number"
+    },
+    "refValues": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "color": {
+            "type": "string"
+          },
+          "text": {
+            "type": "string"
+          },
+          "value": {
+            "type": "number"
+          },
+          "styles": {
+            "type": "object",
+            "properties": {
+              "line": {
+                "type": "object"
+              },
+              "text": {
+                "type": "object"
+              }
+            }
+          },
+          "classNames": {
+            "type": "object",
+            "properties": {
+              "line": {
+                "type": "string"
+              },
+              "text": {
+                "type": "string"
+              }
+            }
+          }
+        },
+        "required": [
+          "value",
+          "text"
+        ]
+      }
+    },
+    "refXValues": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "color": {
+            "type": "string"
+          },
+          "text": {
+            "type": "string"
+          },
+          "value": {
+            "type": "number"
+          },
+          "styles": {
+            "type": "object",
+            "properties": {
+              "line": {
+                "type": "object"
+              },
+              "text": {
+                "type": "object"
+              }
+            }
+          },
+          "classNames": {
+            "type": "object",
+            "properties": {
+              "line": {
+                "type": "string"
+              },
+              "text": {
+                "type": "string"
+              }
+            }
+          }
+        },
+        "required": [
+          "value",
+          "text"
+        ]
+      }
+    },
+    "refYValues": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "color": {
+            "type": "string"
+          },
+          "text": {
+            "type": "string"
+          },
+          "value": {
+            "type": "number"
+          },
+          "styles": {
+            "type": "object",
+            "properties": {
+              "line": {
+                "type": "object"
+              },
+              "text": {
+                "type": "object"
+              }
+            }
+          },
+          "classNames": {
+            "type": "object",
+            "properties": {
+              "line": {
+                "type": "string"
+              },
+              "text": {
+                "type": "string"
+              }
+            }
+          }
+        },
+        "required": [
+          "value",
+          "text"
+        ]
+      }
+    },
+    "customHighlightAreaSettings": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "coordinates": {
+            "type": "array",
+            "items": {
+              "oneOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "number"
+                }
+              ]
+            },
+            "minItems": 4
+          },
+          "color": {
+            "type": "string"
+          },
+          "strokeWidth": {
+            "type": "number"
+          },
+          "dashedStroke": {
+            "type": "boolean"
+          },
+          "closePath": {
+            "type": "boolean"
+          }
+        },
+        "required": [
+          "coordinates"
+        ]
+      }
+    },
+    "relativeHeight": {
+      "type": "number"
+    },
+    "rightBarTitle": {
+      "type": "string"
+    },
+    "rightMargin": {
+      "type": "number"
+    },
+    "sameAxes": {
+      "type": "boolean"
+    },
+    "scale": {
+      "type": "number"
+    },
+    "scaleType": {
+      "type": "string",
+      "enum": [
+        "categorical",
+        "linear",
+        "threshold"
+      ]
+    },
+    "showAntarctica": {
+      "type": "boolean"
+    },
+    "noOfTicks": {
+      "type": "boolean"
+    },
+    "showColorLegendAtTop": {
+      "type": "boolean"
+    },
+    "showColumnLabels": {
+      "type": "boolean"
+    },
+    "showLabels": {
+      "type": "boolean"
+    },
+    "showNAColor": {
+      "type": "boolean"
+    },
+    "showOnlyActiveDate": {
+      "type": "boolean"
+    },
+    "showRowLabels": {
+      "type": "boolean"
+    },
+    "showStrokeForWhiteDots": {
+      "type": "boolean"
+    },
+    "showTicks": {
+      "type": "boolean"
+    },
+    "showValues": {
+      "type": "boolean"
+    },
+    "size": {
+      "type": "number"
+    },
+    "sortData": {
+      "type": "string",
+      "enum": [
+        "asc",
+        "desc"
+      ]
+    },
+    "sortParameter": {
+      "anyOf": [
+        {
+          "type": "string",
+          "enum": [
+            "diff",
+            "total"
+          ]
+        },
+        {
+          "type": "number"
+        }
+      ]
+    },
+    "sources": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "source": {
+            "type": "string"
+          },
+          "link": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "source"
+        ]
+      }
+    },
+    "stripType": {
+      "type": "string",
+      "enum": [
+        "dot",
+        "strip"
+      ]
+    },
+    "strokeWidth": {
+      "type": "number"
+    },
+    "subNote": {
+      "type": "string"
+    },
+    "suffix": {
+      "type": "string"
+    },
+    "topMargin": {
+      "type": "number"
+    },
+    "totalNoOfDots": {
+      "type": "number"
+    },
+    "truncateBy": {
+      "type": "number"
+    },
+    "unitPadding": {
+      "type": "number"
+    },
+    "value": {
+      "type": "number"
+    },
+    "width": {
+      "type": "number"
+    },
+    "xAxisTitle": {
+      "type": "string"
+    },
+    "xColorLegendTitle": {
+      "type": "string"
+    },
+    "xDomain": {
+      "type": "array",
+      "items": {
+        "type": "number"
+      }
+    },
+    "yAxisTitle": {
+      "type": "string"
+    },
+    "yColorLegendTitle": {
+      "type": "string"
+    },
+    "yDomain": {
+      "type": "array",
+      "items": {
+        "type": "number"
+      }
+    },
+    "year": {
+      "oneOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "number"
+        }
+      ]
+    },
+    "zoomLevel": {
+      "type": "number"
+    },
+    "zoomScaleExtend": {
+      "type": "array",
+      "items": {
+        "type": "number"
+      },
+      "minItems": 2,
+      "maxItems": 2
+    },
+    "zoomTranslateExtend": {
+      "type": "array",
+      "items": {
+        "type": "array",
+        "items": {
+          "type": "number"
+        },
+        "minItems": 2,
+        "maxItems": 2
+      },
+      "minItems": 2,
+      "maxItems": 2
+    },
+    "sortNodes": {
+      "type": "string",
+      "enum": [
+        "asc",
+        "desc",
+        "mostReadable",
+        "none"
+      ]
+    },
+    "nodePadding": {
+      "type": "number"
+    },
+    "nodeWidth": {
+      "type": "number"
+    },
+    "defaultLinkOpacity": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 1
+    },
+    "sourceColors": {
+      "oneOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      ]
+    },
+    "targetColors": {
+      "oneOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      ]
+    },
+    "sourceColorDomain": {
+      "type": "array",
+      "items": {
+        "oneOf": [
+          {
+            "type": "string"
+          },
+          {
+            "type": "number"
+          }
+        ]
+      }
+    },
+    "targetColorDomain": {
+      "type": "array",
+      "items": {
+        "oneOf": [
+          {
+            "type": "string"
+          },
+          {
+            "type": "number"
+          }
+        ]
+      }
+    },
+    "sourceTitle": {
+      "type": "string"
+    },
+    "targetTitle": {
+      "type": "string"
+    },
+    "highlightedSourceDataPoints": {
+      "type": "array",
+      "items": {
+        "oneOf": [
+          {
+            "type": "string"
+          },
+          {
+            "type": "number"
+          }
+        ]
+      }
+    },
+    "highlightedTargetDataPoints": {
+      "type": "array",
+      "items": {
+        "oneOf": [
+          {
+            "type": "string"
+          },
+          {
+            "type": "number"
+          }
+        ]
+      }
+    },
+    "cardSearchColumns": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "cardTemplate": {
+      "oneOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "object"
+        }
+      ]
+    },
+    "cardBackgroundColor": {
+      "type": "string"
+    },
+    "cardFilters": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "column": {
+            "type": "string"
+          },
+          "width": {
+            "type": "string"
+          },
+          "label": {
+            "type": "string"
+          },
+          "defaultValue": {
+            "oneOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "number"
+              }
+            ]
+          },
+          "excludeValues": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        },
+        "required": [
+          "column"
+        ]
+      }
+    },
+    "cardSortingOptions": {
+      "type": "object",
+      "properties": {
+        "defaultValue": {
+          "type": "string"
+        },
+        "width": {
+          "type": "string"
+        },
+        "options": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "value": {
+                "type": "string"
+              },
+              "label": {
+                "type": "string"
+              },
+              "type": {
+                "type": "string",
+                "enum": [
+                  "asc",
+                  "desc"
+                ]
+              }
+            },
+            "required": [
+              "value",
+              "label",
+              "type"
+            ]
+          },
+          "minItems": 1
+        }
+      }
+    },
+    "cardMinWidth": {
+      "type": "number"
+    },
+    "detailsOnClick": {
+      "oneOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "object"
+        }
+      ]
+    },
+    "resetSelectionOnDoubleClick": {
+      "type": "boolean"
+    },
+    "legendMaxWidth": {
+      "type": "string"
+    },
+    "intervalAreaOpacity": {
+      "type": "number"
+    },
+    "valueColor": {
+      "type": "string"
+    },
+    "labelColor": {
+      "type": "string"
+    },
+    "noOfYTicks": {
+      "type": "number"
+    },
+    "zoomInteraction": {
+      "type": "string",
+      "enum": [
+        "scroll",
+        "ctrlScroll",
+        "button",
+        "noZoom"
+      ]
+    },
+    "minDate": {
+      "oneOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "number"
+        }
+      ]
+    },
+    "maxDate": {
+      "oneOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "number"
+        }
+      ]
+    },
+    "dashedLines": {
+      "type": "array",
+      "items": {
+        "oneOf": [
+          {
+            "type": "string"
+          },
+          {
+            "type": "number"
+          }
+        ]
+      },
+      "minItems": 1
+    },
+    "dashSettings": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "minItems": 1
+    },
+    "labelsToBeHidden": {
+      "type": "array",
+      "items": {
+        "oneOf": [
+          {
+            "type": "string"
+          },
+          {
+            "type": "number"
+          }
+        ]
+      },
+      "minItems": 1
+    },
+    "colorLegendColors": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "colorLegendDomain": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "lineSuffixes": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "minItems": 2,
+      "maxItems": 2
+    },
+    "linePrefixes": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "minItems": 2,
+      "maxItems": 2
+    },
+    "barSuffix": {
+      "type": "string"
+    },
+    "barPrefix": {
+      "type": "string"
+    },
+    "lineSuffix": {
+      "type": "string"
+    },
+    "barAxisTitle": {
+      "type": "string"
+    },
+    "linePrefix": {
+      "type": "string"
+    },
+    "xSuffix": {
+      "type": "string"
+    },
+    "xPrefix": {
+      "type": "string"
+    },
+    "ySuffix": {
+      "type": "string"
+    },
+    "yPrefix": {
+      "type": "string"
+    },
+    "filterNA": {
+      "type": "boolean"
+    },
+    "uiMode": {
+      "type": "string",
+      "enum": [
+        "light",
+        "normal"
+      ]
+    },
+    "allowDataDownloadOnDetail": {
+      "oneOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "boolean"
+        }
+      ]
+    },
+    "noOfItemsInAPage": {
+      "type": "number",
+      "minimum": 0
+    },
+    "orientation": {
+      "type": "string",
+      "enum": [
+        "vertical",
+        "horizontal"
+      ]
+    },
+    "showDots": {
+      "type": "boolean"
+    },
+    "fillShape": {
+      "type": "boolean"
+    },
+    "colorScaleMaxWidth": {
+      "type": "string"
+    },
+    "axisLabels": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "minItems": 1
+    },
+    "minWidth": {
+      "type": "string"
+    },
+    "layout": {
+      "type": "string",
+      "enum": [
+        "primary",
+        "secondary"
+      ]
+    },
+    "qualitativeRangeColors": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "targetStyle": {
+      "type": "string",
+      "enum": [
+        "background",
+        "line"
+      ]
+    },
+    "targetColor": {
+      "type": "string"
+    },
+    "measureBarWidthFactor": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 1
+    },
+    "mapLegend": {
+      "oneOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "object"
+        }
+      ]
+    },
+    "dimmedOpacity": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 1
+    },
+    "customLayers": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "position": {
+            "type": "string",
+            "enum": [
+              "before",
+              "after"
+            ]
+          },
+          "layer": {
+            "type": "object"
+          }
+        },
+        "required": [
+          "layer",
+          "position"
+        ]
+      }
+    },
+    "categorical": {
+      "type": "boolean"
+    },
+    "lineAxisTitle": {
+      "type": "string"
+    },
+    "autoRotate": {
+      "oneOf": [
+        {
+          "type": "number"
+        },
+        {
+          "type": "boolean"
+        }
+      ]
+    },
+    "atmosphereColor": {
+      "type": "string"
+    },
+    "enableZoom": {
+      "type": "boolean"
+    },
+    "globeMaterial": {
+      "type": "object",
+      "properties": {
+        "color": {
+          "type": "string"
+        },
+        "opacity": {
+          "type": "number"
+        },
+        "transparent": {
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "color",
+        "opacity",
+        "transparent"
+      ]
+    }
+  }
+}
