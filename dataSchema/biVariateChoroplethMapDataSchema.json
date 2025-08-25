@@ -26,6 +26,19 @@
       "id": {
         "type": "string"
       },
+      "date": {
+        "oneOf": [
+          {
+            "type": "string"
+          },
+          {
+            "type": "number"
+          },
+          {
+            "type": "null"
+          }
+        ]
+      },
       "data": {
         "type": "object"
       }

@@ -285,10 +285,10 @@
     "graphID": {
       "type": "string"
     },
-    "maxPositionValue": {
+    "maxValue": {
       "type": "number"
     },
-    "minPositionValue": {
+    "minValue": {
       "type": "number"
     },
     "graphDownload": {
@@ -363,6 +363,31 @@
     },
     "noOfTicks": {
       "type": "number"
+    },
+    "timeline": {
+      "type": "object",
+      "properties": {
+        "autoplay": {
+          "type": "boolean"
+        },
+        "enabled": {
+          "type": "boolean"
+        },
+        "showOnlyActiveDate": {
+          "type": "boolean"
+        },
+        "speed": {
+          "type": "number"
+        },
+        "dateFormat": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "autoplay",
+        "enabled",
+        "showOnlyActiveDate"
+      ]
     }
   },
   "required": [

@@ -791,13 +791,13 @@
       "minItems": 2,
       "maxItems": 2
     },
-    "maxPositionValue": {
+    "maxValue": {
       "type": "number"
     },
     "maxRadiusValue": {
       "type": "number"
     },
-    "maxValue": {
+    "minValue": {
       "type": "number"
     },
     "maxXValue": {
@@ -807,12 +807,6 @@
       "type": "number"
     },
     "minHeight": {
-      "type": "number"
-    },
-    "minPositionValue": {
-      "type": "number"
-    },
-    "minValue": {
       "type": "number"
     },
     "minXValue": {
@@ -1698,6 +1692,31 @@
         "color",
         "opacity",
         "transparent"
+      ]
+    },
+    "timeline": {
+      "type": "object",
+      "properties": {
+        "autoplay": {
+          "type": "boolean"
+        },
+        "enabled": {
+          "type": "boolean"
+        },
+        "showOnlyActiveDate": {
+          "type": "boolean"
+        },
+        "speed": {
+          "type": "number"
+        },
+        "dateFormat": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "autoplay",
+        "enabled",
+        "showOnlyActiveDate"
       ]
     }
   }

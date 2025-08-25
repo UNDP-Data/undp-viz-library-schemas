@@ -264,10 +264,10 @@
     "maxRadiusValue": {
       "type": "number"
     },
-    "maxPositionValue": {
+    "maxValue": {
       "type": "number"
     },
-    "minPositionValue": {
+    "minValue": {
       "type": "number"
     },
     "highlightedDataPoints": {

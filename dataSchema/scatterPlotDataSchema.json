@@ -24,10 +24,27 @@
         ]
       },
       "radius": {
-        "type": "number"
+        "oneOf": [
+          {
+            "type": "number"
+          },
+          {
+            "type": "null"
+          }
+        ]
       },
       "color": {
-        "type": "string"
+        "oneOf": [
+          {
+            "type": "number"
+          },
+          {
+            "type": "string"
+          },
+          {
+            "type": "null"
+          }
+        ]
       },
       "label": {
         "oneOf": [
@@ -36,6 +53,19 @@
           },
           {
             "type": "string"
+          }
+        ]
+      },
+      "date": {
+        "oneOf": [
+          {
+            "type": "string"
+          },
+          {
+            "type": "number"
+          },
+          {
+            "type": "null"
           }
         ]
       },

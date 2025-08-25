@@ -291,6 +291,31 @@
         "light",
         "dark"
       ]
+    },
+    "timeline": {
+      "type": "object",
+      "properties": {
+        "autoplay": {
+          "type": "boolean"
+        },
+        "enabled": {
+          "type": "boolean"
+        },
+        "showOnlyActiveDate": {
+          "type": "boolean"
+        },
+        "speed": {
+          "type": "number"
+        },
+        "dateFormat": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "autoplay",
+        "enabled",
+        "showOnlyActiveDate"
+      ]
     }
   }
 }
