@@ -43,6 +43,12 @@
         }
       ]
     },
+    "highlightedIds": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
     "graphDescription": {
       "oneOf": [
         {
