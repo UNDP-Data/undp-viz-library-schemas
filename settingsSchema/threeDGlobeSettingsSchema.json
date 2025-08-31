@@ -228,7 +228,7 @@
       "minItems": 2,
       "maxItems": 2
     },
-    "globeOffset":{
+    "polygonAltitude":{
       "type": "number"
     }
   }
