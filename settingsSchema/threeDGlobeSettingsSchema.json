@@ -217,24 +217,19 @@
     "enableZoom": {
       "type": "boolean"
     },
-    "globeMaterial": {
-      "type": "object",
-      "properties": {
-        "color": {
-          "type": "string"
-        },
-        "opacity": {
-          "type": "number"
-        },
-        "transparent": {
-          "type": "boolean"
-        }
+    "scale": {
+      "type": "number"
+    },
+    "globeOffset": {
+      "type": "array",
+      "items": {
+        "type": "number"
       },
-      "required": [
-        "color",
-        "opacity",
-        "transparent"
-      ]
+      "minItems": 2,
+      "maxItems": 2
+    },
+    "globeOffset":{
+      "type": "number"
     }
   }
 }
