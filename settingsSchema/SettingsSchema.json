@@ -1678,24 +1678,16 @@
     "enableZoom": {
       "type": "boolean"
     },
-    "globeMaterial": {
-      "type": "object",
-      "properties": {
-        "color": {
-          "type": "string"
-        },
-        "opacity": {
-          "type": "number"
-        },
-        "transparent": {
-          "type": "boolean"
-        }
+    "globeOffset": {
+      "type": "array",
+      "items": {
+        "type": "number"
       },
-      "required": [
-        "color",
-        "opacity",
-        "transparent"
-      ]
+      "minItems": 2,
+      "maxItems": 2
+    },
+    "polygonAltitude":{
+      "type": "number"
     },
     "timeline": {
       "type": "object",
