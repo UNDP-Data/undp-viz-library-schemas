@@ -337,6 +337,13 @@
         "horizontal"
       ]
     },
+    "sortData": {
+      "type": "string",
+      "enum": [
+        "asc",
+        "desc"
+      ]
+    },
     "timeline": {
       "type": "object",
       "properties": {

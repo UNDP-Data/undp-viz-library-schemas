@@ -1689,6 +1689,15 @@
     "polygonAltitude":{
       "type": "number"
     },
+    "globeCurvatureResolution": {
+      "type": "number"
+    },
+    "atmosphereAltitude": {
+      "type": "number"
+    },
+    "lightColor": {
+      "type": "string"
+    },
     "timeline": {
       "type": "object",
       "properties": {

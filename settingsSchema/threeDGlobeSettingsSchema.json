@@ -33,6 +33,15 @@
     "ariaLabel": {
       "type": "string"
     },
+    "globeCurvatureResolution": {
+      "type": "number"
+    },
+    "atmosphereAltitude": {
+      "type": "number"
+    },
+    "lightColor": {
+      "type": "string"
+    },
     "mapData": {
       "oneOf": [
         {
