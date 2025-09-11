@@ -26,6 +26,12 @@
         ]
       }
     },
+    "showColorScale": {
+      "type": "boolean"
+    },
+    "showAxisLabels": {
+      "type": "boolean"
+    },
     "lineAxisTitle": {
       "type": "string"
     },
