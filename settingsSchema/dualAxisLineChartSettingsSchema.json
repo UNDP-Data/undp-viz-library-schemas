@@ -65,6 +65,12 @@
         "stepBefore"
       ]
     },
+    "showColorScale": {
+      "type": "boolean"
+    },
+    "showAxisLabels": {
+      "type": "boolean"
+    },
     "labels": {
       "type": "array",
       "items": {
