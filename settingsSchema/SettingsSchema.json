@@ -520,6 +520,9 @@
     "showColorScale": {
       "type": "boolean"
     },
+    "showAxisLabels": {
+      "type": "boolean"
+    },
     "graphTitle": {
       "oneOf": [
         {
