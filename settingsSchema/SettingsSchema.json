@@ -1,6 +1,9 @@
 {
   "type": "object",
   "properties": {
+    "selectedId": {
+      "type": "string"
+    },
     "naLabel": {
       "type": "string"
     },
@@ -1658,9 +1661,6 @@
           "position"
         ]
       }
-    },
-    "categorical": {
-      "type": "boolean"
     },
     "lineAxisTitle": {
       "type": "string"

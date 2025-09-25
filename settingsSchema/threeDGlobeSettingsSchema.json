@@ -1,9 +1,6 @@
 {
   "type": "object",
   "properties": {
-    "categorical": {
-      "type": "boolean"
-    },
     "styles": {
       "type": "object"
     },
@@ -239,6 +236,9 @@
     },
     "polygonAltitude":{
       "type": "number"
+    },
+    "selectedId":{
+      "type": "string"
     }
   }
 }

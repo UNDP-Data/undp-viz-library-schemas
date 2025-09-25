@@ -23,9 +23,6 @@
         ]
       }
     },
-    "categorical": {
-      "type": "boolean"
-    },
     "dimmedOpacity": {
       "type": "number",
       "minimum": 0,
