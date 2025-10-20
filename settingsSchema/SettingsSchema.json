@@ -1665,6 +1665,9 @@
     "lineAxisTitle": {
       "type": "string"
     },
+    "collapseColorScaleByDefault": {
+      "type": "boolean"
+    },
     "autoRotate": {
       "oneOf": [
         {

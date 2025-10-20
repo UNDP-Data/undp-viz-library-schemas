@@ -28,6 +28,9 @@
       "minimum": 0,
       "maximum": 1
     },
+    "collapseColorScaleByDefault": {
+      "type": "boolean"
+    },
     "animate": {
       "oneOf": [
         {

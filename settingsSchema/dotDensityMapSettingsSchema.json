@@ -315,6 +315,9 @@
     "resetSelectionOnDoubleClick": {
       "type": "boolean"
     },
+    "collapseColorScaleByDefault": {
+      "type": "boolean"
+    },
     "timeline": {
       "type": "object",
       "properties": {

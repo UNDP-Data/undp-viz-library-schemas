@@ -36,6 +36,9 @@
     "atmosphereAltitude": {
       "type": "number"
     },
+    "collapseColorScaleByDefault": {
+      "type": "boolean"
+    },
     "lightColor": {
       "type": "string"
     },
